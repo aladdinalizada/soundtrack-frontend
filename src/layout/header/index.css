@@ -1,0 +1,113 @@
+.headerContainer {
+  margin: 0 60px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.headerContainer .left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+/* Logo */
+.headerContainer .left .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerContainer .left .logo p {
+  width: 30px;
+  height: 30px;
+  background-color: var(--text-color-primary, #121212);
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.headerContainer .left .logo span {
+  font-size: 14px;
+  font-weight: 700;
+}
+/* Nav menu */
+.headerContainer .left .menu ul {
+  display: flex;
+  list-style-type: none;
+  gap: 60px;
+  font-size: 13px;
+}
+.headerContainer .left .menu ul li.active {
+  color: var(--text-color-secondary, #21383e);
+  font-weight: 700;
+}
+/* Auth Buttons */
+.headerContainer .right {
+  display: flex;
+  gap: 60px;
+  height: 100%;
+}
+.headerContainer .right .signUp {
+  border: none;
+  background-color: transparent;
+  color: var(--auth-text, #553c16);
+  font-weight: 700;
+}
+.headerContainer .right .login {
+  background-color: #f5f2ec;
+  color: var(--auth-text, #553c16);
+  font-weight: 700;
+  margin-right: -60px;
+  width: 160px;
+  height: 100%;
+  border: none;
+  border-bottom-left-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Mobile Nav */
+.navBtn {
+  border: none;
+  background-color: transparent;
+  display: none;
+  font-size: 28px;
+}
+.mobileNav {
+  display: none;
+  visibility: hidden;
+}
+.mobileNav.true {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  top: 80%;
+  left: -3%;
+  display: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: calc(13px + 1vw);
+}
+.mobileNav.true li {
+  margin-bottom: 30px;
+}
+@media (max-width: 900px) {
+  .mobileNav.true,
+  .navBtn {
+    display: block;
+    visibility: visible;
+  }
+  .headerContainer {
+    margin: 0 30px;
+  }
+  .headerContainer .right {
+    display: none;
+  }
+  .headerContainer .left .menu {
+    display: none;
+  }
+}

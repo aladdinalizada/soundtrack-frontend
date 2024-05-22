@@ -1,10 +1,17 @@
-import "./App.css";
+import { Helmet } from "react-helmet";
+import Footer from "./layout/footer";
+import Header from "./layout/header";
 
 function App() {
   return (
     <>
       <div>
-        <h1>React App</h1>
+        <Helmet>
+          <title>Soundtrack </title>
+          <meta name="description" content="Soundtrack is Livetime Chat." />
+        </Helmet>
+        <Header />
+        <Footer />
       </div>
     </>
   );
